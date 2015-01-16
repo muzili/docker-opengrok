@@ -13,8 +13,6 @@ fi
 pre_start_action
 post_start_action
 
-service tomcat7 start
-
 # link mounted source directory to opengrok
 ln -fs /source $OPENGROK_INSTANCE_BASE/src
 

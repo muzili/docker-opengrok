@@ -4,6 +4,7 @@ MAINTAINER Joshua Lee <muzili@gmail.com>
 ENV TOMCAT_VERSION 7.0.55
 ENV OPENGROK_INSTANCE_BASE /grok
 ENV CATALINA_HOME /opt/tomcat
+ENV OPENGROK_TOMCAT_BASE /opt/tomcat
 ENV PATH $PATH:$CATALINA_HOME/bin
 
 ADD https://archive.apache.org/dist/tomcat/tomcat-7/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz /tmp/catalina.tar.gz
