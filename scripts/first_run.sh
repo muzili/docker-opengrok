@@ -3,8 +3,8 @@ pre_start_action() {
     mkdir $OPENGROK_INSTANCE_BASE/data
     mkdir $OPENGROK_INSTANCE_BASE/etc
 
-    wget -O - https://java.net/projects/opengrok/downloads/download/opengrok-0.12.1.tar.gz | tar zxvf - -C /
-    mv /opengrok-* opengrok
+    mkdir /opengrok
+    tar --strip-components=1 -zxvf /tmp/opengrok.tgz -C /opengrok/
     cd /opengrok/bin
     ./OpenGrok deploy
 }

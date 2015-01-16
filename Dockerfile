@@ -3,6 +3,7 @@ MAINTAINER Joshua Lee <muzili@gmail.com>
 
 ENV OPENGROK_INSTANCE_BASE /grok
 
+ADD https://java.net/projects/opengrok/downloads/download/opengrok-0.12.1.tar.gz /tmp/opengrok.tgz
 ADD scripts /scripts
 
 RUN apt-get update && \
