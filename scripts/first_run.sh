@@ -3,8 +3,16 @@ pre_start_action() {
     mkdir $OPENGROK_INSTANCE_BASE/data
     mkdir $OPENGROK_INSTANCE_BASE/etc
 
-    mkdir /opengrok
-    tar --strip-components=1 -zxvf /tmp/opengrok.tgz -C /opengrok/
+    mkdir -p /etc/supervisor/conf.d
+    cat > /etc/supervisor/conf.d/supervisord.conf <<-EOF
+[supervisord]
+nodaemon=true
+
+[program:opengrok]
+command=$CATALINA_HOME/bin/catalina.sh run
+
+EOF
+
     cd /opengrok/bin
     ./OpenGrok deploy
 }
