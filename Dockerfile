@@ -27,7 +27,7 @@ RUN mkdir -p /opt/tomcat && \
     chmod +x /scripts/start.sh && \
     touch /first_run
 
-VOLUME ["/source"]
+VOLUME ["/source", "/grok"]
 EXPOSE 8080
 
 CMD ["/scripts/start.sh"]
