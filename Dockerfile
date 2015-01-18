@@ -1,4 +1,4 @@
-FROM muzili/centos-base
+FROM muzili/centos-nginx
 MAINTAINER Joshua Lee <muzili@gmail.com>
 
 ENV TOMCAT_VERSION 7.0.55
