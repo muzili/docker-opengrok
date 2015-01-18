@@ -28,6 +28,6 @@ RUN mkdir -p /opt/tomcat && \
     touch /first_run
 
 VOLUME ["/source", "/grok"]
-EXPOSE 8080
+EXPOSE 80 443
 
 CMD ["/scripts/start.sh"]
