@@ -13,7 +13,7 @@ ADD scripts /scripts
 
 RUN yum -y update && \
     yum -y install tar java-1.7.0-openjdk && \
-    yum -y install ctags git-all
+    yum -y install ctags git-all cronie
 
 # UNPACK
 RUN mkdir -p /opt/tomcat && \
