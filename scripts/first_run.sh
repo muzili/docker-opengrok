@@ -4,13 +4,14 @@ pre_start_action() {
     mkdir $OPENGROK_INSTANCE_BASE/data
     mkdir $OPENGROK_INSTANCE_BASE/etc
 
+    mkdir -p $LOG_DIR/supervisor
     mkdir -p /etc/supervisor/conf.d
     cat > /etc/supervisord.conf <<-EOF
 [unix_http_server]
 file=/run/supervisor.sock   ; (the path to the socket file)
 
 [supervisord]
-logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
+logfile=$LOG_DIR/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
 logfile_maxbytes=50MB       ; (max main logfile bytes b4 rotation;default 50MB)
 logfile_backups=10          ; (num of main logfile rotation backups;default 10)
 loglevel=info               ; (log level;default info; others: debug,warn,trace)
