@@ -16,4 +16,4 @@ post_start_action
 # link mounted source directory to opengrok
 ln -fs /source $OPENGROK_INSTANCE_BASE/src
 
-exec supervisord
+exec supervisord -c /etc/supervisord.conf
