@@ -14,6 +14,7 @@ pre_start_action
 post_start_action
 
 # link mounted source directory to opengrok
+rm -rf $OPENGROK_INSTANCE_BASE/src
 ln -fs /source $OPENGROK_INSTANCE_BASE/src
 
 exec supervisord
