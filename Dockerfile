@@ -20,8 +20,6 @@ RUN mkdir -p /opt/tomcat && \
     tar --strip-components=1 -xzf /tmp/catalina.tar.gz -C /opt/tomcat/ && \
     rm /tmp/catalina.tar.gz && \
     rm -rf /opt/tomcat/webapps/examples /opt/tomcat/webapps/docs && \
-    rm -rf /opt/tomcat/webapps/ROOT && \
-    ln -sf source /opt/tomcat/webapps/ROOT && \
     mkdir /opengrok && \
     tar --strip-components=1 -zxvf /tmp/opengrok.tgz -C /opengrok/ && \
     rm /tmp/opengrok.tgz && \

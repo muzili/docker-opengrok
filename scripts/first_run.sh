@@ -98,6 +98,20 @@ EOF
 
     cd /opengrok/bin
     ./OpenGrok deploy
+
+    # Redirect the tomcat root to opengrok app
+    cat > $CATALINA_HOME/webapps/ROOT/index.jsp <<EOF
+<html>
+
+<head>
+<meta http-equiv="refresh" content="0;URL=http://$VIRTUAL_HOST/source/">
+</head>
+
+<body>
+</body>
+
+</html>
+EOF
 }
 
 post_start_action() {
